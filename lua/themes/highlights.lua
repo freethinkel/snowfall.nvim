@@ -48,33 +48,28 @@ M.setup = function(theme)
 		{ bg = mixColors(schema.base00, schema.base0F, 0.1), fg = mixColors(schema.base0F, schema.base00, 0.1) }
 	)
 
-	hi("DiagnosticError", { bg = mixColors(colors.red, schema.base00, 0.9), fg = colors.red })
+	hi("DiagnosticError", { bg = nil, fg = colors.red })
 	hi("DiagnosticSignError", { bg = "none", fg = colors.red })
-	hi(
-		"DiagnosticUnderlineError",
-		{ bg = mixColors(colors.red, schema.base00, 0.9), undercurl = true, sp = colors.red }
-	)
+	hi("DiagnosticUnderlineError", { bg = nil, undercurl = true, sp = colors.red })
+	hi("DiagnosticVirtualTextError", { bg = mixColors(colors.red, schema.base00, 0.9), fg = colors.red })
 
-	hi("DiagnosticWarn", { bg = mixColors(colors.yellow, schema.base00, 0.9), fg = colors.yellow })
+	hi("DiagnosticWarn", { bg = nil, fg = colors.yellow })
 	hi("DiagnosticSignWarn", { bg = "none", fg = colors.yellow })
-	hi(
-		"DiagnosticUnderlineWarn",
-		{ bg = mixColors(colors.yellow, schema.base00, 0.9), undercurl = true, sp = colors.yellow }
-	)
+	hi("DiagnosticUnderlineWarn", { bg = nil, undercurl = true, sp = colors.yellow })
+	hi("DiagnosticVirtualTextWarn", { bg = mixColors(colors.yellow, schema.base00, 0.9), fg = colors.yellow })
 
-	hi("DiagnosticHint", { bg = mixColors(colors.green, schema.base00, 0.9), fg = colors.green })
+	hi("DiagnosticHint", { bg = nil, fg = colors.green })
 	hi("DiagnosticSignHint", { bg = "none", fg = colors.green })
-	hi(
-		"DiagnosticUnderlineHint",
-		{ bg = mixColors(colors.green, schema.base00, 0.9), undercurl = true, sp = colors.green }
-	)
+	hi("DiagnosticUnderlineHint", { bg = nil, undercurl = true, sp = colors.green })
+	hi("DiagnosticVirtualTextHint", { bg = mixColors(colors.green, schema.base00, 0.9), fg = colors.green })
 
-	hi("DiagnosticInfo", { bg = mixColors(colors.blue, schema.base00, 0.9), fg = colors.blue })
+	hi("DiagnosticInfo", { bg = nil, fg = colors.blue })
 	hi("DiagnosticSignInfo", { bg = "none", fg = colors.blue })
-	hi(
-		"DiagnosticUnderlineInfo",
-		{ bg = mixColors(colors.blue, schema.base00, 0.9), undercurl = true, sp = colors.blue }
-	)
+	hi("DiagnosticUnderlineInfo", { bg = nil, undercurl = true, sp = colors.blue })
+	hi("DiagnosticVirtualTextInfo", { bg = mixColors(colors.blue, schema.base00, 0.9), fg = colors.blue })
+
+	-- - DiagnosticUnderlineWarn nvim.vim.lsp.lua_ls.1.diagnostic.underline
+	-- - LspReferenceRead nvim.lsp.references
 
 	hi("SpellCap", { undercurl = true, sp = colors.blue })
 	hi("Bold", { bold = true })
